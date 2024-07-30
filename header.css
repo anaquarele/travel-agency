@@ -1,0 +1,46 @@
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh + 80px);
+  background: url("./public/images/norway.jpg") no-repeat center center;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+#logo img {
+  max-width: 40px;
+}
+
+#navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#nav_logo {
+  width: 80px;
+  border-radius: 0;
+}
+
+#nav_list {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+}
+
+#btn_right {
+  display: flex;
+  padding-right: 20px;
+  gap: 10px;
+}
+
+#btn_right button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
