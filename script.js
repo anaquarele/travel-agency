@@ -1,3 +1,21 @@
+let lastScrollTop = 0;
+const navbar = document.getElementById('navbar');
+
+window.addEventListener('scroll', function() {
+  const scrollTop = window.pageYOffs  || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop) {
+    // Scroll down
+    navbar.style.top = '-65px'; // Ajuste a altura conforme necessário
+  } else {
+    // Scroll up
+    navbar.style.top = '0';
+  }
+  lastScrollTop = scrollTop;
+});
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".slide");
   const totalSlides = slides.length;
