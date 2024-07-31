@@ -1,18 +1,24 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".slide");
+  const totalSlides = slides.length;
+  let slideIndex = 0;
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function showSlides(n) {
-  let slides = document.getElementsByClassName("slide");   
-
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  function updateSlidePosition() {
+    const slideWidth = slides[0].clientWidth;
+    document.querySelector(".slider").style.transform = `translateX(-${slideIndex * slideWidth}px)`;
   }
-  slides[slideIndex-1].style.display = "block";   
 
-}
+  document.querySelector(".next").addEventListener("click", () => {
+    slideIndex = (slideIndex + 1) % totalSlides;
+    updateSlidePosition();
+  });
+
+  document.querySelector(".prev").addEventListener("click", () => {
+    slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
+    updateSlidePosition();
+  });
+
+  window.addEventListener("resize", updateSlidePosition); // Ajusta a posição ao redimensionar a janela
+
+  updateSlidePosition(); // Define a posição inicial
+});

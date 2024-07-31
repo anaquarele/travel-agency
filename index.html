@@ -36,6 +36,7 @@
     <section class="slider-container">
       <div id="title_citys">
         <h1>Popular Destination</h1>
+        <hr>
         <p>
           Most popular destinations around the world, from historical places
           natural wonders.
@@ -44,16 +45,17 @@
       <div class="slider">
         <div class="slide">
           <img src="/public/images/berlin.jpg" alt="Monumento de Berlim" />
-          <p>Monumento de Berlim<br />Berlim, Alemanha</p>
-        </div>
-        <div class="slide">
-          <img src="/public/images/italy.jpg" alt="Monumento de Berlim" />
-          <p>Monumento de Berlim<br />Berlim, Alemanha</p>
+          <p >Monumento de Berlim<br />Berlim, Alemanha</p>
         </div>
         <div class="slide">
           <img src="/public/images/london.jpg" alt="Monumento de Berlim" />
-          <p>Monumento de Berlim<br />Berlim, Alemanha</p>
+          <p>Millennium Bridge<br />London, United Kingdom</p>
         </div>
+        <div class="slide">
+          <img src="/public/images/italy.jpg" alt="Monumento de Berlim" />
+          <p>Rialto Bridge<br />Venice, Italy</p>
+        </div>
+        
         <div class="slide">
           <img src="/public/images/lisboa.jpg" alt="Monumento de Berlim" />
           <p>Monumento de Berlim<br />Berlim, Alemanha</p>
@@ -70,32 +72,8 @@
       <button class="prev" onclick="prevSlide()">❮</button>
       <button class="next" onclick="nextSlide()">❯</button>
     </section>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const slides = document.querySelectorAll(".slide");
-        const totalSlides = slides.length;
-        let slideIndex = 0;
-    
-        function updateSlidePosition() {
-          const slideWidth = slides[0].clientWidth;
-          document.querySelector(".slider").style.transform = `translateX(-${slideIndex * slideWidth}px)`;
-        }
-    
-        document.querySelector(".next").addEventListener("click", () => {
-          slideIndex = (slideIndex + 1) % totalSlides;
-          updateSlidePosition();
-        });
-    
-        document.querySelector(".prev").addEventListener("click", () => {
-          slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
-          updateSlidePosition();
-        });
-    
-        window.addEventListener("resize", updateSlidePosition); // Ajusta a posição ao redimensionar a janela
-    
-        updateSlidePosition(); // Define a posição inicial
-      });
-    </script>
+
+   <script src="script.js"></script>
     
   </body>
 </html>
