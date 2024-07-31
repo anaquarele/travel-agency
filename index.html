@@ -1,35 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travellian</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <div id="navbar">
-            <div id="nav_logo">
-                <img src="public/images/logo.png" alt="Travellian Logo">
-            </div>
-            <ul id="nav_list">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#explore">Explore</a></li>
-                <li><a href="#travel">Travel</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-            </ul>
-            <div id="btn_right">
-                <button id="login">Login</button>
-                <button id="register">Sign Up</button>
-            </div>
+      <div id="navbar">
+        <div id="nav_logo">
+          <img src="public/images/logo.png" alt="Travellian Logo" />
+          <h3>Travellian</h3>
         </div>
+        <ul id="nav_list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#explore">Explore</a></li>
+          <li><a href="#travel">Travel</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+        </ul>
+        <div id="btn_right">
+          <button id="login">Login</button>
+          <button id="register">Sign Up</button>
+        </div>
+      </div>
     </header>
     <section id="intro">
-        <div class="intro-content">
-            <h1>Start your unforgettable journey with us.</h1>
-            <p>The best travel for your journey begins now</p>
-        </div>
+      <div class="intro-content">
+        <h1>Start your unforgettable journey with us.</h1>
+        <p>The best travel for your journey begins now</p>
+      </div>
     </section>
-</body>
+
+    <section class="slider-container">
+      <div id="title_citys">
+        <h1>Popular Destination</h1>
+        <p>
+          Most popular destinations around the world, from historical places
+          natural wonders.
+        </p>
+      </div>
+      <div class="slider">
+        <div class="slide">
+          <img src="/public/images/berlin.jpg" alt="Monumento de Berlim" />
+          <p>Monumento de Berlim<br />Berlim, Alemanha</p>
+        </div>
+        <div class="slide">
+          <img src="/public/images/italy.jpg" alt="Monumento de Berlim" />
+          <p>Monumento de Berlim<br />Berlim, Alemanha</p>
+        </div>
+        <div class="slide">
+          <img src="/public/images/london.jpg" alt="Monumento de Berlim" />
+          <p>Monumento de Berlim<br />Berlim, Alemanha</p>
+        </div>
+        <div class="slide">
+          <img src="/public/images/lisboa.jpg" alt="Monumento de Berlim" />
+          <p>Monumento de Berlim<br />Berlim, Alemanha</p>
+        </div>
+        <div class="slide">
+          <img src="/public/images/egypt.jpg" alt="Monumento de Berlim" />
+          <p>Monumento de Berlim<br />Berlim, Alemanha</p>
+        </div>
+        <div class="slide">
+          <img src="/public/images/rio-brazil.jpg" alt="Monumento de Berlim" />
+          <p>Monumento de Berlim<br />Berlim, Alemanha</p>
+        </div>
+      </div>
+      <button class="prev" onclick="prevSlide()">❮</button>
+      <button class="next" onclick="nextSlide()">❯</button>
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const slides = document.querySelectorAll(".slide");
+        const totalSlides = slides.length;
+        let slideIndex = 0;
+    
+        function updateSlidePosition() {
+          const slideWidth = slides[0].clientWidth;
+          document.querySelector(".slider").style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+        }
+    
+        document.querySelector(".next").addEventListener("click", () => {
+          slideIndex = (slideIndex + 1) % totalSlides;
+          updateSlidePosition();
+        });
+    
+        document.querySelector(".prev").addEventListener("click", () => {
+          slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
+          updateSlidePosition();
+        });
+    
+        window.addEventListener("resize", updateSlidePosition); // Ajusta a posição ao redimensionar a janela
+    
+        updateSlidePosition(); // Define a posição inicial
+      });
+    </script>
+    
+  </body>
 </html>
