@@ -129,12 +129,12 @@ h3 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/*SECTION DE CIDADES*/
+/*SLIDER CIDADES*/
 .slider-container {
-  width: 95%;
+  width: 100%;
   overflow: hidden;
   position: relative;
-  margin: 20px;
+  padding: 40px 20px;
 }
 
 #title_citys{
@@ -188,14 +188,14 @@ h3 {
 .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 65%;
   width: auto;
-  padding: 16px;
+  padding: 10px;
   margin-top: -22px;
   color: white;
   font-weight: bold;
   font-size: 18px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
   border: none;
   border-radius: 3px;
   user-select: none;
@@ -207,4 +207,90 @@ h3 {
 
 .next {
   right: 0;
+}
+
+
+/* PACOTES PARA COMPRA */
+
+.special-offer {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #fff;
+}
+
+.special-offer h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-family: 'Embed code', sans-serif;
+}
+
+.special-offer p {
+  font-size: 18px;
+  color: #666;
+  font-family: 'Embed code', sans-serif;
+}
+
+.offers-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.offer-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  overflow: hidden;
+  width: 300px;
+  text-align: left;
+  margin: 20px;
+}
+
+.offer-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.offer-card h3 {
+  font-size: 24px;
+  margin: 15px 10px;
+  font-family: 'Embed code', sans-serif;
+}
+
+.offer-card p {
+  margin: 10px 15px;
+  color: #333;
+  font-family: 'Embed code', sans-serif;
+}
+
+.offer-card p:first-of-type {
+  font-size: 20px;
+  color: #f90;
+}
+
+.offer-card p:last-of-type {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.offer-card button {
+  display: block;
+  width: calc(100% - 30px);
+  margin: 0 15px 20px;
+  padding: 10px 0;
+  background-color: #ff7e5f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.offer-card button:hover {
+  background-color: #ff6a3d;
 }
