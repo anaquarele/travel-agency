@@ -294,3 +294,72 @@ h3 {
 .offer-card button:hover {
   background-color: #ff6a3d;
 }
+
+/* SECTION BLOG */
+.blog-section {
+  background-color: #fff;
+  padding: 50px 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.blog-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.blog-header h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.blog-header p {
+  font-size: 18px;
+  color: #666;
+}
+
+.blog-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.blog-content img {
+  width: 350px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.blog-text h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.blog-text p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.blog-text a {
+  font-size: 16px;
+  color: #ff7e5f;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.blog-text a span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.blog-text a:hover span {
+  transform: translateX(5px);
+}
