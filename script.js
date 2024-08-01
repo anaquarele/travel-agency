@@ -1,3 +1,4 @@
+/*BARRA SUPERIOR*/
 let lastScrollTop = 0;
 const navbar = document.getElementById('navbar');
 
@@ -14,7 +15,7 @@ window.addEventListener('scroll', function() {
 });
 
 
-
+/*CARROSSEL DE FOTOS*/
 
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".slide");
@@ -40,3 +41,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateSlidePosition(); // Define a posição inicial
 });
+
+
+/*CARDS DE CIDADES*/
+
+function showInfo(element) {
+  const info = element.querySelector('.info');
+  if (info) {
+      info.style.display = 'flex';
+  }
+}
+
+function hideInfo(element) {
+  const info = element.querySelector('.info');
+  if (info) {
+      info.style.display = 'none';
+  }
+}

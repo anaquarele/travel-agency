@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travellian</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="./public/images/icon.png" type="image/png">
-    
+    <link rel="icon" href="./public/images/icon.png" type="image/png" />
   </head>
   <body>
     <header>
@@ -38,7 +37,7 @@
     <section class="slider-container">
       <div id="title_citys">
         <h1>Popular Destination</h1>
-        <hr>
+        <hr />
         <p>
           Most popular destinations around the world, from historical places
           natural wonders.
@@ -46,9 +45,8 @@
       </div>
       <div class="slider">
         <div class="slide">
-          
           <img src="/public/images/berlin.jpg" alt="Monumento de Berlim" />
-          <p >Monumento de Berlim<br />Berlim, Alemanha</p>
+          <p>Monumento de Berlim<br />Berlim, Alemanha</p>
         </div>
         <div class="slide">
           <img src="/public/images/london.jpg" alt="Monumento de Berlim" />
@@ -58,7 +56,7 @@
           <img src="/public/images/italy.jpg" alt="Monumento de Berlim" />
           <p>Rialto Bridge<br />Venice, Italy</p>
         </div>
-        
+
         <div class="slide">
           <img src="/public/images/lisboa.jpg" alt="Monumento de Berlim" />
           <p>Monumento de Berlim<br />Berlim, Alemanha</p>
@@ -80,51 +78,125 @@
       <h2>Special Offer</h2>
       <p>Check out our special offer and discounts</p>
       <div class="offers-container">
-          <div class="offer-card">
-              <img src="/public/images/lisboa1.jpg" alt="Lisbon, Portugal">
-              <h3>Lisbon, Portugal</h3>
-              <p>★★★★★</p>
-              <p>5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during the renaissance. Passage and going through the cites of the world in classical literature.</p>
-              <p>From <strong>€500</strong></p>
-              <button>DETAILS</button>
+        <div class="offer-card">
+          <img src="/public/images/lisboa1.jpg" alt="Lisbon, Portugal" />
+          <h3>Lisbon, Portugal</h3>
+          <p>★★★★★</p>
+          <p>
+            5 nights and 4 days in 5 star hotel, breakfast and lunch included.
+            Very popular during the renaissance. Passage and going through the
+            cites of the world in classical literature.
+          </p>
+          <p>From <strong>€500</strong></p>
+          <button>DETAILS</button>
+        </div>
+        <div class="offer-card">
+          <img src="./public/images/atenas.jpg" alt="Athens, Greece" />
+          <h3>Athens, Greece</h3>
+          <p>★★★★★</p>
+          <p>
+            5 nights and 4 days in 5 star hotel, breakfast and lunch included.
+            Very popular during the renaissance. Passage and going through the
+            cites of the world in classical literature.
+          </p>
+          <p>From <strong>€800</strong></p>
+          <button>DETAILS</button>
+        </div>
+        <div class="offer-card">
+          <img src="./public//images/roma.jpg" alt="Rome, Italy" />
+          <h3>Rome, Italy</h3>
+          <p>★★★★★</p>
+          <p>
+            5 nights and 4 days in 5 star hotel, breakfast and lunch included.
+            Very popular during the renaissance. Passage and going through the
+            cites of the world in classical literature.
+          </p>
+          <p>From <strong>€750</strong></p>
+          <button>DETAILS</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-tour">
+      <div class="header-text">
+          <h1>Trip Planners</h1>
+          <p>20 years from now you will be more disappointed by the things that you didn’t do. Stop regretting and start travelling, start throwing off the bowlines.</p>
+          <button>View all trip plans</button>
+      </div>
+      <div class="tours">
+          <div class="tour" onmouseover="showInfo(this)" onmouseout="hideInfo(this)">
+              <img src="./public//images/ny.jpg" alt="Colosseum">
+              <div class="info">
+                <h3>New York</h3>
+                <p>€99/Day</p>
+                <h2>Paris City Tour</h2>
+                <p>5 ★★★★★</p>
+                <p>7 Days tour</p>
+            </div>
           </div>
-          <div class="offer-card">
-              <img src="./public/images/atenas.jpg" alt="Athens, Greece">
-              <h3>Athens, Greece</h3>
-              <p>★★★★★</p>
-              <p>5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during the renaissance. Passage and going through the cites of the world in classical literature.</p>
-              <p>From <strong>€800</strong></p>
-              <button>DETAILS</button>
+          <div class="tour" onmouseover="showInfo(this)" onmouseout="hideInfo(this)">
+              <img src="./public/images/paris_1.jpg" alt="Paris">
+              <div class="info">
+                  <h3>Guided Tour</h3>
+                  <p>€99/Day</p>
+                  <h2>Paris City Tour</h2>
+                  <p>5 ★★★★★</p>
+                  <p>7 Days tour</p>
+              </div>
           </div>
-          <div class="offer-card">
-              <img src="./public//images/roma.jpg" alt="Rome, Italy">
-              <h3>Rome, Italy</h3>
-              <p>★★★★★</p>
-              <p>5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during the renaissance. Passage and going through the cites of the world in classical literature.</p>
-              <p>From <strong>€750</strong></p>
-              <button>DETAILS</button>
+          <div class="tour" onmouseover="showInfo(this)" onmouseout="hideInfo(this)">
+              <img src="./public/images/espanha_1.jpg" alt="Madrid">
+              <div class="info">
+                <h3>Guided Tour</h3>
+                <p>€99/Day</p>
+                <h2>Paris City Tour</h2>
+                <p>5 ★★★★★</p>
+                <p>7 Days tour</p>
+            </div>
+          </div>
+          <div class="tour" onmouseover="showInfo(this)" onmouseout="hideInfo(this)">
+              <img src="./public/images/norway (1).jpg" alt="Budapest">
+              <div class="info">
+                <h3>Guided Tour</h3>
+                <p>€99/Day</p>
+                <h2>Paris City Tour</h2>
+                <p>5 ★★★★★</p>
+                <p>7 Days tour</p>
+            </div>
           </div>
       </div>
   </section>
 
-  <section class="blog-section">
-    <div class="container">
+
+
+    <section class="blog-section">
+      <div class="container">
         <div class="blog-header">
-            <h2>Our Blog</h2>
-            <p>An insight the incredible experience in the world</p>
+          <h2>Our Blog</h2>
+          <p>An insight the incredible experience in the world</p>
         </div>
         <div class="blog-content">
-            <img src="./public/images/italy2.jpg" alt="Beautiful Italy">
-            <div class="blog-text">
-                <h3>Beautiful Italy<br>Let’s travel</h3>
-                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues.</p>
-                <a href="#">Read More <span>→ </span></a>
-            </div>
+          <img src="./public/images/italy2.jpg" alt="Beautiful Italy" />
+          <div class="blog-text">
+            <h3>Beautiful Italy<br />Let’s travel</h3>
+            <p>
+              But I must explain to you how all this mistaken idea of denouncing
+              pleasure and praising pain was born and I will give you a complete
+              account of the system, and expound the actual teachings of the
+              great explorer of the truth, the master-builder of human
+              happiness. No one rejects, dislikes, or avoids pleasure itself,
+              because it is pleasure, but because those who do not know how to
+              pursue pleasure rationally encounter consequences that are
+              extremely painful. Nor again is there anyone who loves or pursues.
+            </p>
+            <a href="#">Read More <span>→ </span></a>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-   <script src="script.js"></script>
-    
+   
+
+    <script src="script.js"></script>
   </body>
 </html>
