@@ -1,3 +1,5 @@
+
+
 /*BARRA SUPERIOR*/
 let lastScrollTop = 0;
 const navbar = document.getElementById('navbar');
@@ -5,14 +7,26 @@ const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', function() {
   const scrollTop = window.pageYOffs  || document.documentElement.scrollTop;
   if (scrollTop > lastScrollTop) {
-    // Scroll down
-    navbar.style.top = '-65px'; // Ajuste a altura conforme necessário
+
+    navbar.style.top = '-65px'; 
   } else {
-    // Scroll up
+
     navbar.style.top = '0';
   }
   lastScrollTop = scrollTop;
 });
+
+
+/*  */
+
+function showContent() {
+  document.querySelector('#intro .intro-content').style.opacity = '50';
+}
+
+
+setTimeout(showContent, 50);
+
+
 
 
 /*CARROSSEL DE FOTOS*/
@@ -37,9 +51,9 @@ document.addEventListener("DOMContentLoaded", () => {
     updateSlidePosition();
   });
 
-  window.addEventListener("resize", updateSlidePosition); // Ajusta a posição ao redimensionar a janela
+  window.addEventListener("resize", updateSlidePosition); 
 
-  updateSlidePosition(); // Define a posição inicial
+  updateSlidePosition(); 
 });
 
 
@@ -58,3 +72,7 @@ function hideInfo(element) {
       info.style.display = 'none';
   }
 }
+
+
+
+
